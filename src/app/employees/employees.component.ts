@@ -14,6 +14,11 @@ export class EmployeesComponent implements OnInit{
     constructor( private employeeService:EmployeeService) { }
     ngOnInit(): void {
     this.employees = this.employeeService.onGet();
+    
+}
+onDelete(id: Number){
+
+    this.employeeService.onDelete(id);
 
 }
 }
